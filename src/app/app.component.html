@@ -1,0 +1,26 @@
+
+
+<div id="Contenedor">
+    <script>document.write(usuario)</script> 
+
+    <h1>{{title}}</h1>
+    <input type="text" #newTodo >
+    <button (click)="addTodo(newTodo.value); newTodo.value='' ">Agregar</button>
+    <table>
+        <tr>
+            <th>Tarea</th>
+            <th>Realizado</th>
+            <th>Accion</th>
+        </tr>
+        <tr *ngFor="let todo of todos">
+            <td>{{todo.label}}</td>
+            <td><input name="verificar" type="checkbox"></td>
+            <td>
+                <button (click)="deleteTodo(todo)">Borrar</button> 
+            </td>
+        </tr>
+    
+        
+    </table>
+
+</div>
